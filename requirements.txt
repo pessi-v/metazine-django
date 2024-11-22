@@ -2,3 +2,4 @@ Django
 feedparser
 celery
 django-celery-beat
+django-extensions

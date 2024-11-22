@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     "django.contrib.staticfiles",
     'feeds',
     'django_celery_beat',  # For scheduled tasks
+    'django_extensions',
 ]
 
 MIDDLEWARE = [

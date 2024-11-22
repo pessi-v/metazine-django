@@ -1,6 +1,9 @@
 server:
 	python3 manage.py runserver
 
+s:
+	make server
+
 migrate:
 	python3 manage.py migrate
 
@@ -13,5 +16,17 @@ migrations:
 showmigrations:
 	python3 manage.py showmigrations
 
+console:
+	python3 manage.py shell_plus
+
+c:
+	make console
+
+requirements:
+	pip3 install -r requirements.txt
+
+bundle:
+	make requirements
+
 checkmigrations:
-    python manage.py makemigrations --check --no-input --dry-run
+	python3 manage.py makemigrations --check --no-input --dry-run
