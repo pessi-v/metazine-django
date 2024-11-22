@@ -12,3 +12,6 @@ migrations:
 
 showmigrations:
 	python3 manage.py showmigrations
+
+checkmigrations:
+    python manage.py makemigrations --check --no-input --dry-run
