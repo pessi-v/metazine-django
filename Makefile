@@ -30,3 +30,6 @@ bundle:
 
 checkmigrations:
 	python3 manage.py makemigrations --check --no-input --dry-run
+
+create_admin_user:
+	python3 manage.py createsuperuser
