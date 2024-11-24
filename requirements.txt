@@ -3,3 +3,4 @@ feedparser
 celery
 django-celery-beat
 django-extensions
+inflect
