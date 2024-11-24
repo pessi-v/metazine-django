@@ -33,3 +33,8 @@ checkmigrations:
 
 create_admin_user:
 	python3 manage.py createsuperuser
+
+.PHONY: fetch-feeds run-celery run-celery-beat
+
+fetch_feeds:
+	python3 manage.py fetch_feeds
