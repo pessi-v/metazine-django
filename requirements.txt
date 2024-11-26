@@ -4,3 +4,5 @@ celery
 django-celery-beat
 django-extensions
 inflect
+requests
+beautifulsoup4

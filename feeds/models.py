@@ -15,6 +15,8 @@ class FeedItem(models.Model):
     description = models.TextField()
     published_date = models.DateTimeField()
     unique_id = models.CharField(max_length=500, unique=True)
+    og_image = models.URLField(null=True, blank=True)
+    og_description = models.TextField(null=True, blank=True)
 
     def __str__(self):
         return self.title

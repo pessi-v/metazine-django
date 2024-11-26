@@ -16,10 +16,16 @@
           <div class="twelve_grid">
             {% for index_word, item in feed_items %}
             <div class="card" style="grid-area: {{ index_word }} ;">
+              {% if item.og_image %}
+              <img
+                src="{{ item.og_image }}"
+                alt="{{ item.title }}"
+                class="feed-item-image"
+              />
+              {% endif %}
               <h2><a href="{{ item.link }}">{{ item.title }}</a></h2>
               <p>Source: {{ item.feed.name }}</p>
-              <p>{{ item.description|safe|truncatewords:30 }}</p>
-              <p>{{ item.description }}</p>
+
               <small>Published: {{ item.published_date }}</small>
             </div>
             {% endfor %}

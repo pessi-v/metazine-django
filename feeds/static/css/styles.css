@@ -31,7 +31,7 @@
     "seven seven seven seven seven seven eight eight eight eight eight eight"
     "nine nine nine nine nine nine nine nine nine nine nine nine"
     "eleven eleven eleven eleven eleven twelve twelve twelve twelve twelve twelve twelve"
-    ". . . . . . . . . . . ."
+    "thirteen thirteen fourteen fourteen fifteen fifteen sixteen sixteen . . . ."
     ". . . . . . . . . . . .";
 }
 
@@ -47,6 +47,7 @@
 
   img {
     opacity: 0.75;
+    max-width: 45%;
   }
 }
 
