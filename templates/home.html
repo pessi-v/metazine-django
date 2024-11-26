@@ -15,10 +15,11 @@
           <h1>New Future</h1>
           <div class="twelve_grid">
             {% for index_word, item in feed_items %}
-            <div class="card" style="grid-area: {{ index_word }};   ">
+            <div class="card" style="grid-area: {{ index_word }} ;">
               <h2><a href="{{ item.link }}">{{ item.title }}</a></h2>
               <p>Source: {{ item.feed.name }}</p>
               <p>{{ item.description|safe|truncatewords:30 }}</p>
+              <p>{{ item.description }}</p>
               <small>Published: {{ item.published_date }}</small>
             </div>
             {% endfor %}

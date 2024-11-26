@@ -30,7 +30,7 @@
     "five five five five five six six six six six six six"
     "seven seven seven seven seven seven eight eight eight eight eight eight"
     "nine nine nine nine nine nine nine nine nine nine nine nine"
-    ". . . . . . . . . . . ."
+    "eleven eleven eleven eleven eleven twelve twelve twelve twelve twelve twelve twelve"
     ". . . . . . . . . . . ."
     ". . . . . . . . . . . .";
 }
@@ -40,6 +40,10 @@
   width: 100%;
   overflow: hidden;
   border: 2px green solid;
+  display: flex;
+  /* flex-direction: column; */
+  flex-wrap: wrap;
+  padding: 1rem;
 
   img {
     opacity: 0.75;
@@ -60,4 +64,9 @@ h1 {
   font-family: "Readex Pro";
   font-size: 12rem;
   font-weight: 400;
+}
+
+h2 {
+  font-family: "Readex Pro";
+  font-size: 3rem;
 }
