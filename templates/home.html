@@ -14,19 +14,12 @@
         <div class="page_container">
           <h1>New Future</h1>
           <div class="twelve_grid">
-            {% for index_word, item in feed_items %}
-            <div class="card" style="grid-area: {{ index_word }} ;">
-              {% if item.og_image %}
-              <img
-                src="{{ item.og_image }}"
-                alt="{{ item.title }}"
-                class="feed-item-image"
-              />
-              {% endif %}
+            {% for item in feed_items %}
+            <div
+              class="card"
+              style="grid-column: span {{ item.card_column_width }}"
+            >
               <h2><a href="{{ item.link }}">{{ item.title }}</a></h2>
-              <p>Source: {{ item.feed.name }}</p>
-
-              <small>Published: {{ item.published_date }}</small>
             </div>
             {% endfor %}
           </div>

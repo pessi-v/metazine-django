@@ -8,6 +8,6 @@ class RSSFeedAdmin(admin.ModelAdmin):
 
 @admin.register(FeedItem)
 class FeedItemAdmin(admin.ModelAdmin):
-    list_display = ('title', 'feed', 'published_date', 'og_image')
+    list_display = ('title', 'feed', 'published_date', 'og_image', 'card_column_width')
     list_filter = ('feed', 'published_date')
     search_fields = ('title', 'description', 'og_description')

@@ -93,4 +93,5 @@ textarea:not([rows]) {
 
 a {
   text-decoration: none;
+  color: #1c1b18;
 }
