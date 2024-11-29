@@ -1,16 +1,12 @@
 from django.shortcuts import render
 from .models import FeedItem
-import inflect
 from django.db.models import Sum
 
 def home_view(request):
-    i = inflect.engine()
-
     feed_items = FeedItem.objects.order_by('-published_date')[:50]
     cards = feed_items[::1]
     rows = organize_cards(cards)
     card_sequence = [item for row in rows for item in row]
-
     return render(request, 'home.html', {'feed_items': card_sequence})
 
 def widths_sum(cards):
@@ -31,9 +27,7 @@ def organize_cards(cards):
                 index = cards.index(gap)
                 filler_card = cards.pop(index)
                 current_row.append(filler_card)
-        
         rows.append(current_row)
         cards = cards[len(current_row):]
-    
     return rows
 
