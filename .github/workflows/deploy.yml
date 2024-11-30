@@ -11,12 +11,11 @@ jobs:
 
       - name: Copy repository contents via scp
         uses: appleboy/scp-action@master
-        env:
-          HOST: ${{ secrets.HOST }}
-          USERNAME: ${{ secrets.USERNAME }}
-          PORT: ${{ secrets.PORT }}
-          KEY: ${{ secrets.SSHKEY }}
         with:
+          host: ${{ secrets.host }}
+          username: ${{ secrets.username }}
+          port: ${{ secrets.PORT }}
+          key: ${{ secrets.SSHKEY }}
           source: "."
           target: "/var/www/mywebsite"
 
@@ -25,6 +24,6 @@ jobs:
         with:
           host: ${{ secrets.HOST }}
           USERNAME: ${{ secrets.USERNAME }}
-          PORT: ${{ secrets.PORT }}
-          KEY: ${{ secrets.SSHKEY }}
+          port: ${{ secrets.PORT }}
+          key: ${{ secrets.SSHKEY }}
           script: make s
