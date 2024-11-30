@@ -26,4 +26,4 @@ jobs:
           USERNAME: ${{ secrets.USERNAME }}
           port: ${{ secrets.PORT }}
           key: ${{ secrets.SSHKEY }}
-          script: make s
+          script: "make s"
