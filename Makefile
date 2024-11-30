@@ -4,7 +4,7 @@ server:
 s:
 	make server
 
-migrate:
+migrate: # can also be used to create a new sqlite database
 	python3 manage.py migrate
 
 inspectdb:
