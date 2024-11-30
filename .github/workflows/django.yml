@@ -12,7 +12,7 @@ jobs:
     strategy:
       max-parallel: 4
       matrix:
-        python-version: [3.8, 3.9]
+        python-version: [3.12.3]
 
     steps:
       - uses: actions/checkout@v4
@@ -24,7 +24,7 @@ jobs:
           port: ${{ secrets.PORT }}
           key: ${{ secrets.SSHKEY }}
           source: "."
-          target: "/var/www/mywebsite"
+          target: "/var/www/metazine"
       - name: Set up Python ${{ matrix.python-version }}
         uses: actions/setup-python@v3
         with:
@@ -38,4 +38,4 @@ jobs:
           python manage.py test
       - name: Run Server
         run: |
-          python3 manage.py runserver
+          /var/www/metazine
