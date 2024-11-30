@@ -38,4 +38,4 @@ jobs:
           python manage.py test
       - name: Run Server
         run: |
-          /var/www/metazine/run_production.sh
+          ./run_production.sh
