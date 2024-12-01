@@ -37,6 +37,6 @@ jobs:
         run: |
           python manage.py test
       - name: Run Server
-        script: chmod +x ./run_production.sh
+        run: chmod +x ./run_production.sh
         run: |
           ./run_production.sh
