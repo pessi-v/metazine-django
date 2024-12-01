@@ -6,3 +6,4 @@ django-extensions
 # inflect
 requests
 beautifulsoup4
+gunicorn
