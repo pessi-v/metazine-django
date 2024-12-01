@@ -24,7 +24,7 @@ class FeedItem(models.Model):
         desc_length = len(self.title or '')
         if desc_length < 30:
             self.card_column_width = 2
-        elif desc_length < 60:
+        elif desc_length < 58:
             self.card_column_width = 3
         else:
             self.card_column_width = 4
