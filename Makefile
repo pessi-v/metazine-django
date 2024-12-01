@@ -38,3 +38,6 @@ create_admin_user:
 
 fetch_feeds:
 	python3 manage.py fetch_feeds
+
+test:
+	python3 manage.py test
