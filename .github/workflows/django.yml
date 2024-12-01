@@ -19,10 +19,10 @@ jobs:
       - name: Copy repository contents via scp
         uses: appleboy/scp-action@master
         with:
-          # host: ${{ secrets.host }}
-          # username: ${{ secrets.username }}
-          # port: ${{ secrets.PORT }}
-          # key: ${{ secrets.SSHKEY }}
+          host: ${{ secrets.host }}
+          username: ${{ secrets.username }}
+          port: ${{ secrets.PORT }}
+          key: ${{ secrets.SSHKEY }}
           source: "."
           target: "/var/www/metazine"
       - name: Set up Python ${{ matrix.python-version }}
