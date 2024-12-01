@@ -42,4 +42,6 @@ jobs:
           chmod +x ./run_production.sh
       - name: Run Server
         run: |
-          ./run_production.sh
+          source environment/bin/activate
+          make migrate
+          nohup python3 manage.py runserver 0.0.0.0:8000
