@@ -10,7 +10,7 @@ env:
   HOST: ${{ secrets.host }}
   USERNAME: ${{ secrets.username }}
   PORT: ${{ secrets.PORT }}
-  KEY: ${{ secrets.SSHKEY }}
+  SSHKEY: ${{ secrets.SSHKEY }}
 
 jobs:
   build:
