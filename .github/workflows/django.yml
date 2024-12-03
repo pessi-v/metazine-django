@@ -37,11 +37,7 @@ jobs:
       - name: Run Tests
         run: |
           python manage.py test
-      - name: Change run script permissions
-        run: |
-          chmod +x ./run_production.sh
-      - name: Run Server
+      - name: Run Migrations
         run: |
           source environment/bin/activate
           make migrate
-          nohup python3 manage.py runserver 0.0.0.0:8000 -v 3
