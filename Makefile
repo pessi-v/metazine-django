@@ -41,3 +41,6 @@ fetch_feeds:
 
 test:
 	python3 manage.py test
+
+statics:
+	python3 manage.py collectstatic --noinput
